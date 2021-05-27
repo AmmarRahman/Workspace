@@ -1,0 +1,22 @@
+version: '3'
+networks:
+  backend:
+    driver: bridge
+volumes:
+  db-data:
+
+services:
+
+### Workspace ##################################################
+  workspace:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - USERNAME
+    container_name: workspace
+    restart: unless-stopped
+    volumes:
+      - ~:/home/${USERNAME}
+    networks:
+      - backend
