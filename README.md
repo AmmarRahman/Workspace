@@ -1,6 +1,8 @@
 # Workspace
 
 Basic Workspace
+## Setup 
+Use the enclosed `init.sh` to set your workspace container up along with the useful aliases.
 
 ## Usage instructions
 
